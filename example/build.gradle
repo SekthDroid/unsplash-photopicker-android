@@ -3,9 +3,11 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 33
+    namespace 'com.unsplash.pickerandroid.example'
+
     defaultConfig {
         applicationId "com.unsplash.pickerandroid.example"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
@@ -18,6 +20,11 @@ android {
 
     buildFeatures {
         viewBinding true
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_17
     }
 
     buildTypes {
